@@ -1,0 +1,340 @@
+/*#region ----------------- Course Details */
+.card-property {
+  margin-bottom: 20px;
+  .card-inner {
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    border-radius: 0 40px;
+    padding: 30px 20px;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .thumb {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    @include displayFlex(flex, center, center);
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .info {
+    margin-top: 20px;
+    text-align: center;
+    h5 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: $textDark;
+      @include textTruncate(1);
+    }
+    p {
+      font-size: 13px;
+      line-height: normal;
+      margin-bottom: 0;
+      color: $textGrey;
+      @include textTruncate(2);
+    }
+  }
+  &:hover {
+    .card-inner {
+      background-color: white;
+    }
+    .icon {
+      color: rgba($color: $secondary, $alpha: 0.3);
+    }
+    .info {
+      h6 {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.card-product {
+  .card-inner {
+    background-color: white;
+    border-radius: 10px;
+  }
+  .thumb {
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  .info {
+    display: grid;
+    grid-template-columns: auto 100px;
+    align-items: center;
+    background-color: $background;
+    border-radius: 0 0 10px 10px;
+    .name {
+      padding: 10px;
+      h5 {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 0;
+        @include textTruncate(2);
+      }
+    }
+    .payment {
+      height: 100%;
+      .btn-payment {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: $primary;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        border-radius: 0 10px 10px 10px;
+        span {
+          display: block;
+          width: 100%;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.card-plans {
+  .card-inner {
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    display: grid;
+    grid-template-columns: 140px auto;
+    padding: 15px 15px 0 15px;
+  }
+  .thumb {
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+  .info {
+    padding-right: 15px;
+    h5 {
+      font-size: 14px;
+      font-weight: 500;
+      color: $textDark;
+      margin-bottom: 10px;
+      @include textTruncate(1);
+    }
+  }
+  .staus {
+    background-color: $background;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+    @include displayFlex(flex, flex-start, center);
+    .item {
+      text-align: center;
+      flex: 1 0 33.33%;
+      width: 33.33%;
+      border-left: 1px solid $borderColor;
+      &:last-child {
+        border: none;
+      }
+      .icon {
+        font-size: 20px;
+        color: $secondary;
+      }
+      h6 {
+        font-size: 12px;
+        color: $textGrey;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 600;
+        color: $textDark;
+        margin-bottom: 0;
+        line-height: normal;
+        small {
+          font-weight: 400;
+          font-size: 12px;
+          margin-right: 5px;
+          color: $textGrey;
+        }
+      }
+    }
+  }
+  .payment {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto 120px;
+    align-items: center;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    .progress {
+      height: 10px;
+      .progress-bar {
+        border-radius: 20px;
+        background-color: $primary;
+      }
+    }
+    .pay-btn {
+      padding-right: 15px;
+    }
+    .btn-payment {
+      width: 100%;
+      background-color: $secondary;
+      border-radius: 8px;
+      font-size: 12px;
+      color: white;
+      border: none;
+      padding: 10px 5px;
+      white-space: nowrap;
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .card-plans {
+    .card-inner {
+      grid-template-columns: 150px auto;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .card-property {
+    .thumb {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .card-product {
+    .info {
+      grid-template-columns: 100%;
+      .name {
+        h5 {
+          -webkit-line-clamp: 1;
+          font-size: 12px;
+        }
+      }
+      .payment {
+        .btn-payment {
+          padding: 10px;
+          font-size: 13px;
+          span {
+            display: unset;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .card-plans {
+    .card-inner {
+      grid-template-columns: 130px auto;
+    }
+    .staus {
+      .item {
+        .icon {
+          font-size: 18px;
+        }
+        h6 {
+          font-size: 11px;
+        }
+        p {
+          small {
+            display: block;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .card-property {
+    .thumb {
+      width: 70px;
+      height: 70px;
+    }
+    .info {
+      h5 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .card-plans {
+    .card-inner {
+      grid-template-columns: 130px auto;
+    }
+    .staus {
+      .item {
+        .icon {
+          font-size: 18px;
+        }
+        h6 {
+          font-size: 11px;
+        }
+        p {
+          small {
+            display: unset;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .card-plans {
+    .card-inner {
+      grid-template-columns: 100%;
+      padding: 10px 10px 0 10px;
+    }
+    .thumb {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+    }
+    .info {
+      padding: 10px 0 0 0;
+      h5 {
+        text-align: center;
+        font-size: 13px;
+      }
+    }
+    .payment {
+      padding: 10px;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .card-plans {
+    .staus {
+      .item {
+        .icon {
+          font-size: 16px;
+        }
+        h6 {
+          font-size: 10px;
+        }
+        p {
+          small {
+            display: block;
+          }
+        }
+      }
+    }
+    .payment {
+      grid-template-columns: 100%;
+      .pay-btn {
+        padding: 10px 0 0 0;
+      }
+    }
+  }
+}
+/*#endregion -------------- Course Details */

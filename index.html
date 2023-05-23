@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffb200" />
+    <meta name="msapplication-navbutton-color" content="#ffb200">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffb200">
+    <title>بانوی آسمان | صفحه نخست</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="scss/main.css">
+
+    <!-- Font Icons -->
+    <link href="css/uicons-regular-rounded.css" rel="stylesheet" type="text/css" />
+    <link href="css/uicons-solid-rounded.css" rel="stylesheet" type="text/css" />
+    <link href="css/uicons-brands.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/small-icon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png" />
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="myNavbar transparent">
+        <div class="container-lg">
+            <div class="header-inner">
+                <div class="mobile-links">
+                    <button type="button" class="btn-mobile-menu"><i class="fi fi-rr-menu-burger"></i></button>
+                    <!-- Sidebar Menu -->
+                    <div id="sidebar-menu">
+                        <div class="sidebar-header">
+                            <div class="sidebar-logo">
+                                <a href="index.html">
+                                    <img src="images/logo.png" class="sidebarlogo" alt="Grand Bimeh Logo">
+                                </a>
+                            </div>
+                            <div class="sidebar-close">
+                                <button class="btn-close-menu"><i class="fi fi-rr-cross"></i></button>
+                            </div>
+                        </div>
+                        <div class="sidebar-sign">
+                            <!-- برای وقتی که ورود/ثبت نام میخواد انجام بده -->
+                            <div class="sign">
+                                <button type="button" class="btn btn-secondary icon-right" data-toggle="modal"
+                                    data-target="#modal-sign">
+                                    <i class="fi fi-rr-sign-out"></i>
+                                    <span>ورود / ثبت نام</span>
+                                </button>
+                            </div>
+                            <!-- برای وقتی که ثبت نام/ ورود کرد -->
+                            <!-- <div class="login">
+                                <a href="#"><span>سمیر دغاغله</span><i class="fi fi-rr-angle-small-left"></i></a>
+                            </div> -->
+                        </div>
+                        <ul class="category-list">
+                            <li class="item"><a href="#">صفحه اصلی</a></li>
+                            <li class="item"><a href="#">گالری تصاویر</a></li>
+                            <li class="item"><a href="#">جهیزیه</a></li>
+                            <li class="item"><a href="#">درباره ما</a></li>
+                            <li class="item"><a href="#">تماس با ما</a></li>
+                        </ul>
+                        <div class="collapse-item">
+                            <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-category-01" aria-expanded="false"
+                                aria-controls="collapse-category-01">
+                                <span class="name">حمایت‌ها</span>
+                                <span class="icon"></span>
+                            </button>
+                            <div class="collapse" id="collapse-category-01">
+                                <div class="card">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <span class="name">مشاهده همه</span>
+                                                <span class="desc"><i class="fi fi-rr-angle-small-left"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="name">حمایت 1</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="name">حمایت 2</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay-back"></div>
+                </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <div class="links">
+                    <ul class="link-list">
+                        <li class="item"><a href="index.html">صفحه اصلی</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">حمایت‌ها<i class="fi fi-rr-angle-small-down"></i></a>
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="#">حمایت ۱</a></li>
+                                <li class="sub-item"><a href="#">حمایت ۲</a></li>
+                                <li class="sub-item"><a href="#">حمایت ۳</a></li>
+                            </ul>
+                        </li>
+                        <li class="item"><a href="gallery-images.html">گالری تصاویر</a>
+                        </li>
+                        <li class="item"><a href="dowry.html">جهیزیه</a></li>
+                        <li class="item"><a href="about-us.html">درباره ما</a></li>
+                        <li class="item"><a href="contact-us.html">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div class="nav-action">
+                    <div class="search" id="desktop-search-content">
+                        <button type="button" class="btn-show-search" id="btn-desktop-search"><i
+                                class="fi fi-rr-search"></i></button>
+                        <div class="search-content">
+                            <div class="search-inputgroup">
+                                <input type="text" class="input" id="search-input" placeholder="جستجو...">
+                                <button type="button" class="btn-search-close"><i class="fi fi-rr-cross"></i></button>
+                                <button type="submit" class="btn-search-sumbit"><i class="fi fi-rr-search"></i></button>
+                            </div>
+                            <div class="result" id="search-result">
+                                <ul>
+                                    <li><a href="#"><i class="fi fi-rr-pencil"></i>عنوان جستجو</a></li>
+                                    <li><a href="#"><i class="fi fi-rr-pencil"></i>عنوان جستجو</a></li>
+                                    <li><a href="#"><i class="fi fi-rr-apps"></i>عنوان جستجو</a></li>
+                                    <li><a href="#"><i class="fi fi-rr-search"></i>عنوان جستجو</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-login">
+
+                        <!-- Sign -->
+                        <div class="sign">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-sign">
+                                <span>ورود</span>
+                                <span>ثبت نام</span>
+                            </button>
+                        </div>
+
+                        <!-- Login -->
+                        <!-- <div class="login">
+                            <div class="user-link">
+                                <div class="icon"><i class="fi fi-rr-user"></i></div>
+                            </div>
+                            <ul class="user-menu">
+                                <li><a href="user-profile.html"><i class="fi fi-rr-user"></i>پروفایل
+                                        من</a></li>
+                                <li><a href="#"><i class="fi fi-rr-heart"></i>حمایت‌های من</a>
+                                </li>
+                                <li><a href="#"><i class="fi fi-rr-credit-card"></i>پرداخت ها</a></li>
+                                <li><a href="#"><i class="fi fi-rr-sign-in-alt"></i>خروج</a></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Hero -->
+    <div class="home-hero-section">
+        <div class="container">
+            <div class="section-inner">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="text-content">
+                            <h1>بانوی آسمان <br>مهری به وسعت ایران</h1>
+                            <div class="desc">
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                    گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </p>
+                            </div>
+                            <div class="btns-group">
+                                <a href="about-us.html" class="btn btn-primary">بیشتر بخوانید...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="image-content">
+                            <div class="img-inner">
+                                <img src="images/iran.png" alt="iran">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About BanoyeAseman -->
+    <div class="about-banoyeaseman-section">
+        <div class="container">
+            <div class="page-title">
+                <div class="title-inner">
+                    <span class="mini-span">ما کی هستیم و وظیفه‌مان چیست؟</span>
+                    <h1>موسسه خیریه بانوی‌آسمان</h1>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </p>
+                </div>
+            </div>
+            <div class="section-inner">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card-property">
+                            <div class="card-inner">
+                                <div class="thumb">
+                                    <img src="images/icons/property-icon-1.svg" alt="icon">
+                                </div>
+                                <div class="info">
+                                    <h5>حمایت های مردمی</h5>
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده می‌باشد
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card-property">
+                            <div class="card-inner">
+                                <div class="thumb">
+                                    <img src="images/icons/property-icon-2.svg" alt="icon">
+                                </div>
+                                <div class="info">
+                                    <h5>حمایت های غیرمردمی</h5>
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده می‌باشد
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card-property">
+                            <div class="card-inner">
+                                <div class="thumb">
+                                    <img src="images/icons/property-icon-3.svg" alt="icon">
+                                </div>
+                                <div class="info">
+                                    <h5>حمایت های انسانی</h5>
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده می‌باشد
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card-property">
+                            <div class="card-inner">
+                                <div class="thumb">
+                                    <img src="images/icons/property-icon-4.svg" alt="icon">
+                                </div>
+                                <div class="info">
+                                    <h5>حمایت های هوایی</h5>
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده می‌باشد
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daily support -->
+    <div class="daily-support-section">
+        <div class="container">
+            <div class="page-title">
+                <div class="title-inner">
+                    <h1>حمایت‌های روزانه</h1>
+                </div>
+            </div>
+            <div class="section-inner">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-content">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="inputgroup">
+                                        <input type="text" class="input" placeholder="نام و نام خانوادگی (اختیاری)"
+                                            maxlength="50">
+                                        <label>نام و نام خانوادگی (اختیاری)</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="select-group">
+                                        <label>نوع کمک</label>
+                                        <select class="form-select">
+                                            <option value="0" selected disabled>کمک</option>
+                                            <option value="1">غیر کمک</option>
+                                            <option value="2">همه موارد</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="inputgroup mb-1">
+                                        <input type="text" class="input" placeholder="تلفن همراه(اختیاری)"
+                                            maxlength="30" required>
+                                        <label>تلفن همراه(اختیاری)</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="inputgroup mb-1">
+                                        <input type="text" class="input" placeholder="توضیحات" maxlength="30" required>
+                                        <label>توضیحات</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="payment-grid">
+                            <div class="grid-counter">
+                                <div class="input-payment">
+                                    <button class="btn-add"><i class="fi fi-rr-plus-small"></i></button>
+                                    <input type="text" class="input" value="25000"
+                                        placeholder="مبلغ دلخواه را وارد کنید">
+                                    <button class="btn-minus"><i class="fi fi-rr-minus-small"></i></button>
+                                </div>
+                                <div class="btns-payment-group">
+                                    <button class="btn-number">10,000 <span>تومان</span></button>
+                                    <button class="btn-number">15,000 <span>تومان</span></button>
+                                    <button class="btn-number">20,000 <span>تومان</span></button>
+                                </div>
+                            </div>
+                            <div class="grid-payment">
+                                <button class="btn-payment">پرداخت آنلاین</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- gallery -->
+    <div class="gallery-section">
+        <div class="container">
+            <div class="section-inner">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="gallery-products">
+                            <div class="title">
+                                <h3>لیست محصولات پکیج جهیزیه</h3>
+                            </div>
+                            <div class="swiper swiper-products">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card-product">
+                                            <div class="card-inner">
+                                                <div class="thumb">
+                                                    <img src="https://via.placeholder.com/400x400/ccc.png"
+                                                        alt="img-name">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="name">
+                                                        <h5>اجاق گاز چند کاره همه فن من حریف اسنوا</h5>
+                                                    </div>
+                                                    <div class="payment">
+                                                        <button class="btn-payment">
+                                                            25,000,000
+                                                            <span>تومان</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-product">
+                                            <div class="card-inner">
+                                                <div class="thumb">
+                                                    <img src="https://via.placeholder.com/400x400/ccc.png"
+                                                        alt="img-name">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="name">
+                                                        <h5>اجاق گاز چند کاره همه فن من حریف اسنوا</h5>
+                                                    </div>
+                                                    <div class="payment">
+                                                        <button class="btn-payment">
+                                                            25,000,000
+                                                            <span>تومان</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-product">
+                                            <div class="card-inner">
+                                                <div class="thumb">
+                                                    <img src="https://via.placeholder.com/400x400/ccc.png"
+                                                        alt="img-name">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="name">
+                                                        <h5>اجاق گاز چند کاره همه فن من حریف اسنوا</h5>
+                                                    </div>
+                                                    <div class="payment">
+                                                        <button class="btn-payment">
+                                                            25,000,000
+                                                            <span>تومان</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="gallery-images">
+                            <div class="title">
+                                <h3>گالری تصاویر</h3>
+                            </div>
+                            <div class="images-grid">
+                                <div class="grid-small img-1">
+                                    <div class="img-content">
+                                        <div class="img-inner">
+                                            <img src="https://via.placeholder.com/500x500/ccc.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-small img-2">
+                                    <div class="img-content">
+                                        <div class="img-inner">
+                                            <img src="https://via.placeholder.com/500x500/ccc.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-small img-3">
+                                    <div class="img-content">
+                                        <div class="img-inner">
+                                            <img src="https://via.placeholder.com/500x500/ccc.png" alt="">
+                                        </div>
+                                        <div class="text-overlay">
+                                            <a href="#">تصاویر بیشتر</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-small img-4">
+                                    <div class="img-content">
+                                        <div class="img-inner">
+                                            <img src="https://via.placeholder.com/500x500/ccc.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-big">
+                                    <div class="img-content">
+                                        <div class="img-inner">
+                                            <img src="https://via.placeholder.com/500x500/ccc.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- طرح‌های حمایتی -->
+    <div class="support-plans-section">
+        <div class="container">
+            <div class="page-title">
+                <div class="title-inner">
+                    <h1>طرح‌های حمایتی</h1>
+                </div>
+            </div>
+            <div class="section-inner">
+                <div class="swiper swiper-plans">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card-plans">
+                                <div class="card-inner">
+                                    <div class="thumb">
+                                        <img src="https://via.placeholder.com/400x400/ccc.png" alt="img-name">
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="name">فراخوان تامین دارو برای کودکان سرطانی</h5>
+                                        <div class="staus">
+                                            <div class="item">
+                                                <span class="icon"><i class="fi fi-rr-wallet"></i></span>
+                                                <h6>مبلغ هدف</h6>
+                                                <p>50,000,000<small>تومان</small></p>
+                                            </div>
+                                            <div class="item">
+                                                <span class="icon"><i class="fi fi-rr-coins"></i></span>
+                                                <h6>جمع آوری شده</h6>
+                                                <p>41,000,000<small>تومان</small></p>
+                                            </div>
+                                            <div class="item">
+                                                <span class="icon"><i class="fi fi-rr-users"></i></span>
+                                                <h6>حامیان</h6>
+                                                <p>20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment">
+                                    <div class="progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            style="width: 75%"></div>
+                                    </div>
+                                    <div class="pay-btn">
+                                        <button class="btn-payment">حمایت می‌کنم</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-plans">
+                                <div class="card-inner">
+                                    <div class="thumb">
+                                        <img src="https://via.placeholder.com/400x400/ccc.png" alt="img-name">
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="name">فراخوان تامین دارو برای کودکان سرطانی</h5>
+                                        <div class="staus">
+                                            <div class="item">
+                                                <span class="icon"><i class="fi fi-rr-wallet"></i></span>
+                                                <h6>مبلغ هدف</h6>
+                                                <p>50,000,000<small>تومان</small></p>
+                                            </div>
+                                            <div class="item">
+                                                <span class="icon"><i class="fi fi-rr-coins"></i></span>
+                                                <h6>جمع آوری شده</h6>
+                                                <p>41,000,000<small>تومان</small></p>
+                                            </div>
+                                            <div class="item">
+                                                <span class="icon"><i class="fi fi-rr-users"></i></span>
+                                                <h6>حامیان</h6>
+                                                <p>20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment">
+                                    <div class="progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            style="width: 75%"></div>
+                                    </div>
+                                    <div class="pay-btn">
+                                        <button class="btn-payment">حمایت می‌کنم</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-plans">
+                                <div class="card-inner">
+                                    <div class="thumb">
+                                        <img src="https://via.placeholder.com/400x400/ccc.png" alt="img-name">
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="name">فراخوان تامین دارو برای کودکان سرطانی</h5>
+                                        <div class="staus">
+                                            <div class="item">
+                                                <span class="icon"><i class="fi fi-rr-wallet"></i></span>
+                                                <h6>مبلغ هدف</h6>
+                                                <p>50,000,000<small>تومان</small></p>
+                                            </div>
+                                            <div class="item">
+                                                <span class="icon"><i class="fi fi-rr-coins"></i></span>
+                                                <h6>جمع آوری شده</h6>
+                                                <p>41,000,000<small>تومان</small></p>
+                                            </div>
+                                            <div class="item">
+                                                <span class="icon"><i class="fi fi-rr-users"></i></span>
+                                                <h6>حامیان</h6>
+                                                <p>20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment">
+                                    <div class="progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            style="width: 75%"></div>
+                                    </div>
+                                    <div class="pay-btn">
+                                        <button class="btn-payment">حمایت می‌کنم</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hadith -->
+    <div class="hadith-section">
+        <div class="container">
+            <div class="section-inner">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/hadith-small.png">
+                    <source media="(min-width: 769px)" srcset="images/hadith-big.png">
+                    <img src="images/hadith-big.png" alt="img-name">
+                </picture>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contactInfo-section">
+        <div class="container">
+            <div class="section-inner">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="call-content">
+                            <div class="info">
+                                <div class="icon">
+                                    <img src="images/call-icon-message.svg" alt="icon-message">
+                                </div>
+                                <h6>025-33425899<br />025-33425899</h6>
+                            </div>
+                            <div class="info">
+                                <div class="icon">
+                                    <img src="images/call-icon-map.svg" alt="icon-map">
+                                </div>
+                                <h6>قم شهرک پردیسان روبروی اداره برق</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="email-content">
+                            <div class="input-email">
+                                <input type="email" class="input" placeholder="test@gmail.com">
+                                <button class="btn btn-secondary">عضویت</button>
+                            </div>
+                            <p>برای دریافت بروزترین کمپین‌ها و حمایت‌ها ایمیل خود را وارد نمایید</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="links">
+                            <h5>درباره‌ ما</h5>
+                            <ul>
+                                <li><a href="#">اهدا</a></li>
+                                <li><a href="#">درباره‌ما</a></li>
+                                <li><a href="#">کمپین جدید</a></li>
+                                <li><a href="#">نقشه سایت</a></li>
+                                <li><a href="#">داستان ما</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="links">
+                            <h5>لینک های سریع</h5>
+                            <ul>
+                                <li><a href="#">با ما همکاری کنید</a></li>
+                                <li><a href="#">ما کی هستیم</a></li>
+                                <li><a href="#">منابع</a></li>
+                                <li><a href="#">آخرین داستان‌ها</a></li>
+                                <li><a href="#">امور مالی</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="links">
+                            <h5>کاوش کنید</h5>
+                            <ul>
+                                <li><a href="#">بیانیه مطبوعاتی</a></li>
+                                <li><a href="#">مخاطب</a></li>
+                                <li><a href="#">پست های وبلاگ</a></li>
+                                <li><a href="#">ارتباط اجتماعی</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="socials">
+                            <h5>با ما در ارتباط باشید</h5>
+                            <ul class="icons-list">
+                                <li><a href="#"><i class="fi fi-brands-twitter"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-telegram"></i></a></li>
+                                <li><a href="#"><i class="fi fi-rr-envelope"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                            </ul>
+                            <div class="enemad-group">
+                                <ul>
+                                    <li><a href="#"><img src="https://via.placeholder.com/100x100/ccc.png"
+                                                alt="e-nemad"></a>
+                                    </li>
+                                    <li><a href="#"><img src="https://via.placeholder.com/100x100/ccc.png"
+                                                alt="e-nemad"></a>
+                                    </li>
+                                    <li><a href="#"><img src="https://via.placeholder.com/100x100/ccc.png"
+                                                alt="e-nemad"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>کلیه حقوق مادی و معنوی این سایت متعلق به موسسه خیریه بانوی آسمان می باشد</span>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="plugins/swiperjs/swiper-initial.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

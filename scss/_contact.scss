@@ -1,0 +1,97 @@
+/*#region ----------------- Contact Us */
+.contactInfo-section {
+  margin: 20px 0 80px 0;
+  .section-inner {
+    border-bottom: 1px solid $borderColor;
+    padding-bottom: 30px;
+  }
+  .call-content {
+    @include displayFlex(flex, center, center);
+    .info {
+      flex: 0 0 50%;
+      width: 50%;
+      display: grid;
+      grid-template-columns: 75px auto;
+      align-items: center;
+      padding: 0 10px;
+      .icon {
+        width: 65px;
+        height: 65px;
+        img {
+          width: 100%;
+        }
+      }
+      h6 {
+        font-size: 14px;
+        font-weight: 400;
+        color: $textDark;
+        margin: 0;
+      }
+    }
+  }
+  .email-content {
+    .input-email {
+      position: relative;
+      .input {
+        width: 100%;
+        height: 46px;
+        border: none;
+        border-radius: 50px;
+        padding: 5px 20px 5px 150px;
+      }
+      .btn-secondary {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    p {
+      margin: 10px 0 0 0;
+      font-size: 13px;
+      text-align: right;
+      color: $textGrey;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+}
+@media (max-width: 992px) {
+  .contactInfo-section {
+    .call-content {
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .contactInfo-section {
+    .call-content {
+      .info {
+        grid-template-columns: 60px auto;
+        .icon {
+          width: 50px;
+          height: 50px;
+        }
+        h6 {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .contactInfo-section {
+    .section-inner {
+      border-bottom: 1px solid $borderColor;
+      padding-bottom: 20px;
+    }
+    .call-content {
+      flex-wrap: wrap;
+      .info {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+/*#endregion -------------- Contact Us */

@@ -1,0 +1,225 @@
+/*#region ----------------- Sidebar Mobile Menu */
+#sidebar-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100vh;
+  width: 300px;
+  z-index: 2002;
+  background: #fff;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+  &.active {
+    right: 0;
+  }
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid $borderColor;
+    .sidebar-close {
+      .btn-close-menu {
+        width: 45px;
+        height: 45px;
+        color: $textGrey;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        .fi {
+          font-size: 22px;
+          position: relative;
+          top: 4px;
+        }
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+    .sidebar-logo {
+      a {
+        display: block;
+        img {
+          width: 80px;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          color: $textDark;
+        }
+      }
+    }
+  }
+  .sidebar-sign {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+    display: none;
+    .login {
+      padding: 10px 0;
+      text-align: right;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $textGrey;
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          @include textTruncate(1);
+        }
+        .fi {
+          font-size: 20px;
+        }
+      }
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+  .category-list {
+    display: none;
+    margin-top: 20px;
+    .item {
+      a {
+        padding: 10px 20px 10px 0;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: $textDark;
+        position: relative;
+        transition: all 0.2s ease;
+        .fi {
+          position: absolute;
+          left: 20px;
+          color: $secondary;
+        }
+        &:hover {
+          color: $primary;
+          padding-right: 30px;
+          background-color: $background;
+        }
+      }
+    }
+  }
+  .collapse-item {
+    position: relative;
+    .btn {
+      width: 100%;
+      padding: 12px 24px 12px 40px;
+      text-align: right;
+      font-size: 14px;
+      border-radius: 0;
+      background-color: white;
+      border: none;
+      color: $textDark;
+      transition: all 0.2s ease;
+      &:hover,
+      &:focus {
+        box-shadow: none;
+        background-color: $background;
+        padding-right: 30px;
+        color: $primary;
+      }
+      .icon {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 24px;
+        height: 24px;
+        color: $textSilver;
+        &::before {
+          content: "\f3d4";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: $iconFontRegular;
+          font-size: 14px;
+        }
+      }
+      &.collapsed {
+        .icon {
+          &::before {
+            content: "\f428";
+          }
+        }
+      }
+    }
+    .card {
+      padding: 15px 15px 15px 0;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid $borderColor;
+      background-color: rgba($color: #000000, $alpha: 0.02);
+      ul {
+        li {
+          &:hover {
+            .name {
+              color: $primary;
+            }
+          }
+          a {
+            display: block;
+            padding: 6px 0;
+          }
+          .name {
+            font-size: 14px;
+            font-weight: 400;
+            color: $textGrey;
+          }
+          .desc {
+            margin-right: 10px;
+            font-size: 12px;
+            font-weight: 400;
+            color: $textSilver;
+          }
+          .fi {
+            font-size: 18px;
+            position: relative;
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.overlay-back {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2001;
+  opacity: 0;
+  transition: all 0.3s;
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+@media (max-width: 992px) {
+  #sidebar-menu {
+    .category-list {
+      display: block;
+    }
+  }
+}
+@media (max-width: 575px) {
+  #sidebar-menu {
+    .sidebar-sign {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #sidebar-menu {
+    width: 100%;
+    right: -400px;
+  }
+}
+/*#endregion -------------- Sidebar Mobile Menu */

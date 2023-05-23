@@ -1,0 +1,66 @@
+/*#region ----------------- Support Plans */
+.support-plans-section {
+  margin: 80px 0;
+  .section-inner {
+    margin-top: 30px;
+    position: relative;
+  }
+}
+.swiper-plans {
+  position: unset !important;
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    box-shadow: $boxshadow;
+    border-radius: 50%;
+    &::after {
+      font-size: 20px;
+      color: $secondary;
+    }
+  }
+  .swiper-button-next {
+    left: -35px !important;
+  }
+  .swiper-button-prev {
+    right: -35px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .support-plans-section {
+  }
+  .swiper-plans {
+    .swiper-button-next {
+      left: -25px !important;
+    }
+    .swiper-button-prev {
+      right: -25px !important;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .swiper-plans {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 35px;
+      height: 35px;
+      &::after {
+        font-size: 18px;
+      }
+    }
+    .swiper-button-next {
+      left: calc(50% - 40px) !important;
+      top: unset;
+      bottom: -50px;
+    }
+    .swiper-button-prev {
+      right: calc(50% - 40px) !important;
+      top: unset;
+      bottom: -50px;
+    }
+  }
+}
+
+/*#endregion -------------- Support Plans */

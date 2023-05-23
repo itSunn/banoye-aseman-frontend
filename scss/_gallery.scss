@@ -1,0 +1,173 @@
+/*#region ----------------- Gallery */
+.gallery-section {
+  margin: 50px 0 80px 0;
+  .title {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid $borderColor;
+    margin-bottom: 20px;
+    h3 {
+      font-size: 18px;
+      color: $textDark;
+      margin-bottom: 0;
+    }
+  }
+  .gallery-products,
+  .gallery-images {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px 20px 10px 20px;
+  }
+  .gallery-images {
+    padding-bottom: 20px;
+    .images-grid {
+      display: grid;
+      grid-template-columns: 25% 25% 50%;
+      grid-template-areas: "imageSmall1 imageSmall2 imageBig" "imageSmall3 imageSmall4 imageBig";
+    }
+    .grid-small {
+      padding: 5px;
+      position: relative;
+      .img-content {
+        @include imgContainer(155px, 5px);
+      }
+      .text-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        a {
+          background-color: rgba($color: $secondary, $alpha: 0.6);
+          @include displayFlex(flex, center, center);
+          color: white;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          font-size: 14px;
+          font-weight: 600;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            background-color: rgba($color: $secondary, $alpha: 0.9);
+          }
+        }
+      }
+    }
+    .grid-big {
+      grid-area: imageBig;
+      padding: 5px;
+      .img-content {
+        @include imgContainer(320px, 5px);
+      }
+    }
+    .grid-small {
+      &.img-1 {
+        grid-area: imageSmall1;
+      }
+      &.img-2 {
+        grid-area: imageSmall2;
+      }
+      &.img-3 {
+        grid-area: imageSmall3;
+      }
+      &.img-4 {
+        grid-area: imageSmall4;
+      }
+    }
+  }
+}
+
+.swiper-products {
+  .swiper-wrapper {
+    padding-bottom: 50px;
+  }
+  .swiper-pagination-bullet {
+    &.swiper-pagination-bullet-active {
+      background-color: $primary;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .gallery-section {
+    .gallery-images {
+      .grid-small {
+        .img-content {
+          height: 140px;
+        }
+      }
+      .grid-big {
+        .img-content {
+          height: 292px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .gallery-section {
+    .gallery-images {
+      padding: 15px;
+      .grid-small {
+        .img-content {
+          height: 134px;
+        }
+      }
+      .grid-big {
+        .img-content {
+          height: 280px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .gallery-section {
+    .gallery-images {
+      margin-top: 15px;
+      .grid-small {
+        .img-content {
+          height: 156px;
+        }
+      }
+      .grid-big {
+        .img-content {
+          height: 320px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .gallery-section {
+    .gallery-images {
+      .images-grid {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "imageBig imageBig" "imageSmall1 imageSmall2" "imageSmall3 imageSmall4";
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .gallery-section {
+    .gallery-images {
+      .grid-small {
+        .img-content {
+          height: 120px;
+        }
+        .text-overlay {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+      .grid-big {
+        .img-content {
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+/*#endregion -------------- Gallery */
