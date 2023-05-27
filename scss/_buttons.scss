@@ -47,4 +47,50 @@
     background: darken($color: $secondary, $amount: 8);
   }
 }
+
+.btn-collapse {
+  border: none;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  padding: 0 10px;
+  position: relative;
+  .title {
+    font-size: 13px;
+    font-weight: 600;
+    color: $textDark;
+    .mdi {
+      position: relative;
+      top: 4px;
+      margin-left: 5px;
+      color: $primary;
+      font-size: 20px;
+      line-height: 0;
+    }
+  }
+  .icon {
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-90deg);
+    transition: all 0.2s ease;
+    color: $textSilver;
+    @include displayFlex(flex, center, center);
+  }
+  &:hover {
+    color: $primary;
+    transition: all 0.2s ease;
+  }
+  &.collapsed {
+    .icon {
+      transform: rotate(0deg);
+      transition: all 0.2s ease;
+    }
+  }
+}
+
 /*#endregion -------------- Buttons */

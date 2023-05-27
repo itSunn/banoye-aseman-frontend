@@ -1,0 +1,44 @@
+/*#region ----------------- Page Header */
+.page-header {
+  .header-inner {
+    position: relative;
+    background-image: url(../images/bg/page-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #163f79, #fea700);
+      opacity: 0.8;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: white;
+      position: relative;
+    }
+    p {
+      position: relative;
+      color: white;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .page-header {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 575px) {
+  .page-header {
+    margin-top: 70px;
+  }
+}
+/*#endregion -------------- Page Header */

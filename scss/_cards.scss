@@ -74,11 +74,34 @@
     .name {
       padding: 10px;
       h5 {
+        color: $textDark;
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 500;
         line-height: normal;
         margin-bottom: 0;
         @include textTruncate(2);
+      }
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        color: $textGrey;
+        margin-bottom: 0;
+        line-height: normal;
+        @include textTruncate(2);
+      }
+      .proprty-list {
+        margin-top: 10px;
+        li {
+          font-size: 13px;
+          font-weight: 400;
+          color: $textDark;
+          margin: 4px 0;
+          @include textTruncate(1);
+          span {
+            color: $textGrey;
+            margin-right: 5px;
+          }
+        }
       }
     }
     .payment {
@@ -92,11 +115,41 @@
         font-size: 14px;
         font-weight: 800;
         border-radius: 0 10px 10px 10px;
+        transition: all 0.3s ease-in-out;
         span {
           display: block;
           width: 100%;
           font-weight: 400;
           font-size: 14px;
+        }
+        &:hover {
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+  &.type-2 {
+    .info {
+      background-color: white;
+      grid-template-columns: 100%;
+      padding: 15px;
+      .name {
+        padding: 0;
+        h5 {
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          @include textTruncate(1);
+        }
+      }
+    }
+    .payment {
+      height: auto;
+      margin-top: 15px;
+      .btn-payment {
+        padding: 10px 5px;
+        span {
+          display: unset;
         }
       }
     }
@@ -288,8 +341,70 @@
       }
     }
   }
+  .card-product {
+    .info {
+      .name {
+        h5 {
+          font-size: 13px;
+        }
+      }
+    }
+    &.type-2 {
+      .info {
+        .name {
+          h5 {
+            font-size: 13px;
+            margin-bottom: 8px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+        .proprty-list {
+          margin-top: 10px;
+          li {
+            font-size: 12px;
+          }
+        }
+      }
+      .payment {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 @media (max-width: 575px) {
+  .card-product {
+    .info {
+      .name {
+        h5 {
+          font-size: 12px;
+        }
+      }
+    }
+    &.type-2 {
+      .info {
+        .name {
+          h5 {
+            font-size: 12px;
+            margin-bottom: 5px;
+          }
+          p {
+            font-size: 10px;
+          }
+        }
+        .proprty-list {
+          margin-top: 8px;
+          li {
+            font-size: 10px;
+          }
+        }
+      }
+      .payment {
+        margin-top: 10px;
+      }
+    }
+  }
   .card-plans {
     .card-inner {
       grid-template-columns: 100%;

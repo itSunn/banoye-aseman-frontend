@@ -54,3 +54,27 @@ if (document.getElementById('btn-desktop-search') !== null) {
         }
     });
 }
+
+// Show Filter on Mobile
+if (document.getElementById('products-section') !== null) {
+    var productsSection = document.getElementById('products-section');
+    var productsSide = productsSection.querySelector('.products-side');
+    var btnAdvancedSearch = document.querySelector('.btn-advanced-search');
+    var filtersideOverlay = document.querySelector('.filterside-overlay');
+    var closeAdvanced = document.querySelector('.btn-close-filter')
+    btnAdvancedSearch.addEventListener('click', function () {
+        productsSide.classList.add('active');
+        filtersideOverlay.classList.add('active')
+        body.classList.add('fixedposition');
+    });
+    closeAdvanced.addEventListener('click', function () {
+        productsSide.classList.remove('active');
+        body.classList.remove('fixedposition');
+        filtersideOverlay.classList.remove('active')
+    });
+    filtersideOverlay.addEventListener('click', function () {
+        productsSide.classList.remove('active');
+        body.classList.remove('fixedposition');
+        filtersideOverlay.classList.remove('active')
+    });
+}

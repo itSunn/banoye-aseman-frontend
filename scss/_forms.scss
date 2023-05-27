@@ -141,6 +141,8 @@
 }
 
 .form-check {
+  padding-right: 1.8rem;
+  margin-top: 10px;
   .form-check-label {
     font-size: 14px;
     font-weight: 400;
@@ -154,6 +156,21 @@
     &:focus {
       box-shadow: none;
     }
+    &[type="radio"] {
+      width: 1.2em;
+      height: 1.2em;
+      margin-right: -1.8em;
+    }
+  }
+}
+
+.form-switch {
+  padding-right: 3.2em;
+  min-height: 2em;
+  .form-check-input {
+    height: 1.5em;
+    width: 2.4rem;
+    margin-right: -3.3em;
   }
 }
 
