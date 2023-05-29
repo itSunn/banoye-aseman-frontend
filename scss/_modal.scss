@@ -8,11 +8,22 @@
   font-weight: 600;
 }
 .modal-body {
+  .message {
+    font-size: 16px;
+    font-weight: 500;
+    color: $textDark;
+  }
   .btns-apply-filter {
     margin-top: 20px;
     .btn {
       width: 100%;
     }
+  }
+}
+.modal-footer {
+  border-top: none;
+  .btn {
+    border-radius: 50px;
   }
 }
 /*#endregion -------------- Modal Styles */

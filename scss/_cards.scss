@@ -247,10 +247,23 @@
     }
   }
 }
+
+.card-image {
+  padding: 5px;
+  .thumb {
+    @include imgContainer(230px, 6px);
+  }
+}
+
 @media (max-width: 1400px) {
   .card-plans {
     .card-inner {
       grid-template-columns: 150px auto;
+    }
+  }
+  .card-image {
+    .thumb {
+      height: 200px;
     }
   }
 }
@@ -372,6 +385,13 @@
       }
     }
   }
+  .card-image {
+    .thumb {
+      height: 230px;
+    }
+  }
+}
+@media (max-width: 768px) {
 }
 @media (max-width: 575px) {
   .card-product {
@@ -426,6 +446,11 @@
       padding: 10px;
     }
   }
+  .card-image {
+    .thumb {
+      height: 160px;
+    }
+  }
 }
 @media (max-width: 450px) {
   .card-plans {
@@ -449,6 +474,11 @@
       .pay-btn {
         padding: 10px 0 0 0;
       }
+    }
+  }
+  .card-image {
+    .thumb {
+      height: 130px;
     }
   }
 }

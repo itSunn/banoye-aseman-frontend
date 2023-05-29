@@ -78,3 +78,27 @@ if (document.getElementById('products-section') !== null) {
         filtersideOverlay.classList.remove('active')
     });
 }
+
+
+if (document.querySelector('.user-profile-section') != null) {
+    var userMenu = document.querySelector('.grid-user-menu');
+    var overlayUserMenu = document.querySelector('.overlay-userMenu');
+    var btnUserMenu = document.querySelector('.btn-usermenu');
+    var btnCloseprofileMenu = document.querySelector('.btn-closeprofileMenu');
+
+    btnUserMenu.onclick = () => {
+        userMenu.classList.add('active');
+        overlayUserMenu.classList.add('active');
+        body.classList.add('fixedposition');
+    }
+    overlayUserMenu.onclick = () => {
+        userMenu.classList.remove('active');
+        overlayUserMenu.classList.remove('active');
+        body.classList.remove('fixedposition');
+    }
+    btnCloseprofileMenu.onclick = () => {
+        userMenu.classList.remove('active');
+        overlayUserMenu.classList.remove('active');
+        body.classList.remove('fixedposition');
+    }
+}

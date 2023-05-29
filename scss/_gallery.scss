@@ -88,6 +88,43 @@
   }
 }
 
+.gallery-content {
+  margin-bottom: 80px;
+  .gallery-title {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $borderColor;
+    h2 {
+      font-size: 20px;
+      color: $textDark;
+    }
+    p {
+      font-size: 14px;
+      color: $textGrey;
+      margin-bottom: 10px;
+    }
+    .date {
+      font-size: 13px;
+      color: $textGrey;
+      .fi {
+        font-size: 16px;
+        position: relative;
+        top: 3px;
+        margin-left: 5px;
+        color: $textSilver;
+      }
+    }
+  }
+  .gallery-list {
+    @include displayFlex(flex, center, flex-start);
+    flex-wrap: wrap;
+    .card-image {
+      flex: 0 0 25%;
+      width: 25%;
+    }
+  }
+}
+
 @media (max-width: 1400px) {
   .gallery-section {
     .gallery-images {
@@ -120,6 +157,14 @@
       }
     }
   }
+  .gallery-content {
+    .gallery-list {
+      .card-image {
+        flex: 0 0 33.33%;
+        width: 33.33%;
+      }
+    }
+  }
 }
 @media (max-width: 992px) {
   .gallery-section {
@@ -137,6 +182,23 @@
       }
     }
   }
+  .gallery-content {
+    margin-top: 2rem;
+    .gallery-title {
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 13px;
+      }
+      .date {
+        font-size: 12px;
+        .fi {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 768px) {
   .gallery-section {
@@ -144,6 +206,14 @@
       .images-grid {
         grid-template-columns: 50% 50%;
         grid-template-areas: "imageBig imageBig" "imageSmall1 imageSmall2" "imageSmall3 imageSmall4";
+      }
+    }
+  }
+  .gallery-content {
+    .gallery-list {
+      .card-image {
+        flex: 0 0 50%;
+        width: 50%;
       }
     }
   }

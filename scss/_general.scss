@@ -126,5 +126,7 @@ input[type="number"] {
   display: inline-block !important;
   line-height: 0 !important;
 }
-
+.fixedposition {
+  overflow: hidden;
+}
 /*#endregion -------------- General */

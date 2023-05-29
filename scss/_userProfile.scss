@@ -1,0 +1,711 @@
+/*#region ----------------- User Profile */
+.user-profile-section {
+  margin: 3rem 0 6rem 0;
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 320px auto;
+  }
+  .grid-user-menu {
+    transition: all 0.2s ease-in-out;
+    .grid-inner {
+      border-radius: 10px;
+      position: sticky;
+      top: 30px;
+      background-color: white;
+    }
+  }
+  .grid-main {
+    padding-right: 20px;
+    .grid-inner {
+      border-radius: 10px;
+      background-color: white;
+    }
+  }
+  .user-image {
+    padding: 30px 15px 15px 15px;
+    .img-inner {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      position: relative;
+      img {
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid $borderColor;
+      }
+    }
+    .btn-opernImage {
+      position: absolute;
+      bottom: -5px;
+      left: -5px;
+      width: 34px;
+      height: 34px;
+      background-color: $primary;
+      padding: 2px;
+      border-radius: 50%;
+      color: white;
+      font-size: 14px;
+      border: 3px solid white;
+      @include displayFlex(flex, center, center);
+    }
+    .user-name {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: $textGrey;
+      margin-top: 1.2rem;
+    }
+  }
+  .user-menu {
+    padding: 15px 0 15px 15px;
+    position: relative;
+    border-top: 2px solid $background;
+    .btn-collape,
+    .sub-btn-collape {
+      font-size: 15px;
+      font-weight: 300;
+      color: $textGrey;
+      @include displayFlex(flex, center, flex-start);
+      padding: 12px 20px;
+      position: relative;
+      width: 100%;
+      transition: all 0.2s ease-in;
+      border-radius: 8px;
+      .fi {
+        font-size: 20px;
+        margin-left: 10px;
+        color: $textSilver;
+        transition: all 0.2s ease-in;
+      }
+      &.dropdown {
+        &::before {
+          content: "\f10d";
+          font-family: $iconFontRegular;
+          position: absolute;
+          top: 10px;
+          left: 5px;
+          font-size: 12px;
+          color: $textSilver;
+          transform: rotate(0deg);
+        }
+      }
+      &.collapsed {
+        &.dropdown {
+          &::before {
+            transform: rotate(90deg);
+          }
+        }
+      }
+      &:hover {
+        color: $primary !important;
+        .fi {
+          color: $primary;
+        }
+      }
+    }
+    .btn-collape {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        border-radius: 5px;
+        background-color: transparent;
+        transform: translateY(-50%);
+      }
+    }
+    .sub-menu-list {
+      background-color: rgba($color: $textGrey, $alpha: 0.1);
+      padding: 10px 20px 10px 10px;
+      border-radius: 10px;
+      .btn-collape {
+        color: $textGrey;
+      }
+    }
+    .menu-item {
+      position: relative;
+      &.active {
+        .btn-collape {
+          color: $accent !important;
+          background-color: rgba($color: $accent, $alpha: 0.1);
+          font-weight: 400;
+          &::before {
+            background-color: $accent;
+          }
+          .fi {
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
+  .main-title {
+    @include displayFlex(flex, center, space-between);
+    padding: 20px;
+    position: relative;
+    margin-top: 0;
+    border-bottom: 2px solid $background;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+    }
+    .title-inner {
+      display: grid;
+      grid-template-columns: 40px auto;
+      align-items: center;
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+      background-color: $accent;
+      border-radius: 12px;
+      @include displayFlex(flex, center, center);
+      .fi {
+        color: white;
+        line-height: 0 !important;
+        display: inline-block;
+        font-size: 18px;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0;
+      margin-right: 20px;
+      text-align: right;
+    }
+    .buttons-group {
+      .btn {
+        padding: 0.4rem 1rem 0.7rem 1rem;
+        background: $background;
+        color: $textGrey;
+        &.icon-right {
+          .fi {
+            margin: 0 0 0 10px;
+          }
+        }
+        &.icon-left {
+          .fi {
+            margin: 0 10px 0 0;
+          }
+        }
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+      .fi {
+        font-size: 20px;
+        line-height: 0 !important;
+        display: inline-block !important;
+        position: relative;
+        top: 6px;
+        color: $textGrey;
+      }
+    }
+  }
+  .main-body {
+    padding: 20px 20px 40px 20px;
+  }
+  .description {
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textGrey;
+      text-align: justify;
+    }
+  }
+  .products-list {
+    @include displayFlex(flex, flex-start, flex-start);
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    .card-course {
+      flex: 0 0 33.33%;
+      width: 33.33%;
+      padding-left: 15px;
+      margin-bottom: 1.5rem;
+      .card-inner {
+        background-color: $background;
+        padding: 10px;
+        border-radius: 15px;
+        position: relative;
+        margin-bottom: 1rem;
+        box-shadow: none;
+        border: 1px solid transparent;
+      }
+      .img-container {
+        height: 210px;
+      }
+      &:hover {
+        .card-inner {
+          border-color: $borderColor;
+        }
+      }
+    }
+  }
+}
+
+// For Mobile
+.btn-usermenu {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $accent;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  color: $primary;
+  @include displayFlex(none, center, center);
+  animation: pulse 2s linear infinite;
+  .fi {
+    font-size: 20px;
+    display: inline-block;
+    line-height: 0;
+  }
+}
+.btn-closeprofileMenu {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 45px;
+  height: 45px;
+  color: $textGrey;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  @include displayFlex(none, center, center);
+  .fi {
+    font-size: 24px;
+  }
+  &:hover {
+    color: $primary;
+  }
+}
+.overlay-userMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1998;
+  opacity: 0;
+  transition: all 0.3s;
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.forms-group {
+  .apply-buttons-group {
+    text-align: right;
+    margin-top: 30px;
+    .btn {
+      min-width: 170px;
+    }
+  }
+}
+
+.alert {
+  p {
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+
+.profile-status {
+  .status-inner {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+  .card-status {
+    padding: 5px;
+    .card-inner {
+      background-color: $background;
+      border-radius: 30px 0 30px 30px;
+      padding: 12px;
+      user-select: none;
+      transition: all 0.2s ease-in-out;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 28px;
+      @include textTruncate(1);
+      color: white;
+    }
+    .number {
+      margin-top: 2rem;
+      text-align: left;
+      font-size: 22px;
+      font-weight: 800;
+      color: white;
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        margin-right: 5px;
+        color: rgba($color: white, $alpha: 0.7);
+      }
+    }
+    &:hover {
+      &.color-1 {
+        .card-inner {
+          background-color: darken($color: $primary, $amount: 8);
+        }
+      }
+      &.color-2 {
+        .card-inner {
+          background-color: darken($color: $secondary, $amount: 8);
+        }
+      }
+      &.color-3 {
+        .card-inner {
+          background-color: darken($color: $accent, $amount: 8);
+        }
+      }
+    }
+    &.color-1 {
+      .card-inner {
+        background-color: $primary;
+      }
+    }
+    &.color-2 {
+      .card-inner {
+        background-color: $secondary;
+      }
+    }
+    &.color-3 {
+      .card-inner {
+        background-color: $accent;
+      }
+    }
+  }
+}
+
+.section-row {
+  margin-top: 4rem;
+  .row-inner {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    &.one-row {
+      grid-template-columns: 100%;
+    }
+  }
+  .inner-title {
+    @include displayFlex(flex, center, space-between);
+    margin-bottom: 1rem;
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      .fi {
+        font-size: 18px;
+        margin-left: 10px;
+        position: relative;
+        top: 5px;
+        color: $textSilver;
+      }
+    }
+    .btn-link {
+      font-size: 14px;
+      color: $primary;
+      background-color: $accent;
+      border-radius: 8px;
+      padding: 5px 12px 5px 8px;
+      .fi {
+        position: relative;
+        top: 3px;
+        margin-right: 5px;
+      }
+      &:hover {
+        background-color: $primary;
+        color: white;
+      }
+    }
+  }
+  picture {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.order-details-content {
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $textDark;
+    margin-bottom: 20px;
+    span {
+      color: $textGrey;
+    }
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    li {
+      flex: 0 0 50%;
+      width: 50%;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .name {
+        color: $textGrey;
+      }
+      .desc {
+        color: $textDark;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.orders-list {
+  margin-top: 2.5rem;
+  .list-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $textDark;
+    margin-bottom: 15px;
+  }
+  .product-item {
+    display: grid;
+    grid-template-columns: 150px auto;
+    align-items: flex-start;
+    border: 1px solid $borderColor;
+    background-color: $background;
+    padding: 15px;
+    &:first-child {
+      border-radius: 15px 15px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 15px 15px;
+      margin-top: -1px;
+    }
+    .img-container {
+      @include imgContainer(115px, 10px);
+    }
+    .p-info {
+      padding: 10px 15px 0 0;
+      .name {
+        font-size: 15px;
+        font-weight: 600;
+        color: $textDark;
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .property-list {
+        .item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+          .titr {
+            font-size: 14px;
+            font-weight: 500;
+            color: $textGrey;
+          }
+          .desc {
+            font-size: 14px;
+            font-weight: 500;
+            color: $textDark;
+            margin-right: 5px;
+          }
+        }
+      }
+      .info-inner {
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .price-content {
+          text-align: left;
+          .off-price {
+            font-size: 15px;
+            font-weight: 600;
+            color: $error;
+            margin-bottom: 0.3rem;
+            .toman,
+            .label {
+              margin: 0 5px;
+              font-size: 11px;
+              font-weight: 400;
+            }
+          }
+          .real-price {
+            font-size: 20px;
+            font-weight: 600;
+            color: $textDark;
+            margin-bottom: 0;
+            .toman {
+              font-size: 13px;
+              font-weight: 400;
+              margin-right: 5px;
+              color: $textGrey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .user-profile-section {
+    .products-list {
+      .card-course {
+        .img-container {
+          height: 170px;
+        }
+      }
+    }
+  }
+  .section-row {
+  }
+}
+@media (max-width: 1199px) {
+  .user-profile-section {
+    .grid-layout {
+      grid-template-columns: 280px auto;
+    }
+    .products-list {
+      .card-course,
+      .card-teacher {
+        flex: 0 0 50%;
+        width: 50%;
+      }
+    }
+  }
+  .profile-status .status-inner {
+    grid-template-columns: 50% 50%;
+  }
+  .section-row {
+    .row-inner {
+      grid-template-columns: 50% 50%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .user-profile-section {
+    margin: 8rem 0 7rem 0;
+    .grid-layout {
+      grid-template-columns: 100%;
+    }
+    .grid-user-menu {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      z-index: 1999;
+      .grid-inner {
+        position: relative;
+        top: 0;
+        z-index: 2000;
+        height: 100%;
+        overflow-y: auto;
+        transition: all 0.3s;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 20px 0 0 20px;
+        border: none;
+      }
+      &.active {
+        right: 0;
+      }
+    }
+    .grid-main {
+      padding: 0;
+    }
+    .main-title {
+      padding: 12px;
+      .icon {
+        display: none;
+      }
+    }
+    .main-body {
+      border-top: none;
+      border-radius: 10px;
+      padding: 15px 10px;
+    }
+  }
+  .btn-closeprofileMenu,
+  .btn-usermenu {
+    display: flex;
+  }
+  .profile-status .status-inner {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
+@media (max-width: 768px) {
+  .user-profile-section {
+    .main-title {
+      h3 {
+        font-size: 16px;
+      }
+      .buttons-group .btn {
+        font-size: 13px;
+        &.icon-left {
+          .fi {
+            margin: 0 5px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .user-profile-section {
+    .main-title {
+      margin-bottom: 0;
+      flex-direction: column;
+      .title-inner {
+        width: 100%;
+      }
+      .buttons-group {
+        width: 100%;
+        text-align: left;
+        margin-top: 15px;
+      }
+    }
+  }
+  .profile-status .card-status {
+    padding: 5px;
+    h2 {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+    .number {
+      margin-top: 0.8rem;
+      font-size: 18px;
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 350px) {
+  .user-profile-section .grid-user-menu {
+    width: 100%;
+    right: -400px;
+    .grid-inner {
+      border-radius: 0;
+    }
+  }
+}
+/*#endregion -------------- User Profile */
