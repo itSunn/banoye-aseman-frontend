@@ -196,7 +196,7 @@
                         <!-- User Menu -->
                         <div class="user-menu">
                             <ul class="menu-list">
-                                <li class="menu-item active">
+                                <li class="menu-item">
                                     <a href="user-profile.html" class="btn-collape"><i
                                             class="fi fi-rr-apps"></i>داشبورد</a>
                                 </li>
@@ -204,7 +204,7 @@
                                     <a href="user-information.html" class="btn-collape"><i
                                             class="fi fi-rr-user"></i>اطلاعات کاربری</a>
                                 </li>
-                                <li class="menu-item">
+                                <li class="menu-item active">
                                     <a href="user-support.html" class="btn-collape"><i
                                             class="fi fi-rr-heart"></i>حمایت‌های من</a>
                                 </li>
@@ -241,57 +241,67 @@
                                 <button type="button" class="btn-usermenu"><i
                                         class="fi fi-rr-menu-dots-vertical"></i></button>
                                 <div class="icon">
-                                    <i class="fi fi-rr-apps"></i>
+                                    <i class="fi fi-rr-heart"></i>
                                 </div>
-                                <h3>داشبورد</h3>
+                                <h3>حمایت‌های من</h3>
+                            </div>
+                            <div class="buttons-group">
+                                <a href="user-support.html" class="btn btn-secondary-outline icon-left">بازگشت<i
+                                        class="fi fi-rr-arrow-left"></i></a>
                             </div>
                         </div>
                         <div class="main-body">
-
-                            <div class="profile-status">
-                                <div class="status-inner">
-                                    <div class="card-status color-1">
-                                        <div class="card-inner">
-                                            <h2>حمایت‌های من</h2>
-                                            <div class="number">3<span>حمایت</span></div>
+                            <div class="forms-group">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inputgroup">
+                                            <input type="text" class="input"
+                                                placeholder="نام و نام خانوادگی (اختیاری)" />
+                                            <label>نام و نام خانوادگی (اختیاری)</label>
                                         </div>
                                     </div>
-                                    <div class="card-status color-2">
-                                        <div class="card-inner">
-                                            <h2>پرداختی‌های من</h2>
-                                            <div class="number">7<span>پرداخت</span></div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inputgroup">
+                                            <input type="text" class="input" placeholder="تلفن همراه (اختیاری)" />
+                                            <label>تلفن همراه (اختیاری)</label>
                                         </div>
                                     </div>
-                                    <div class="card-status color-3">
-                                        <div class="card-inner">
-                                            <h2>حمایت‌های نقدی</h2>
-                                            <div class="number">620,000<span>تومان</span></div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="select-group">
+                                            <label>نوع کمک</label>
+                                            <select class="form-select">
+                                                <option value="0" selected disabled>کمک</option>
+                                                <option value="1">غیر کمک</option>
+                                                <option value="2">همه موارد</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="inputgroup">
+                                            <input type="number" class="input" placeholder="مبلغ دلخواه (تومان)"
+                                                value="50000" required />
+                                            <label>مبلغ دلخواه (تومان)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="inputgroup">
+                                            <input type="text" class="input" placeholder="توضیحات" />
+                                            <label>توضیحات</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="btns-group">
+                                            <button type="submit" class="btn btn-primary">پرداخت آنلاین</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Hadith -->
-                            <div class="section-row">
-                                <div class="inner-title">
-                                    <h2><i class="fi fi-rr-book"></i>حدیث روز</h2>
-                                </div>
-                                <div class="row-inner one-row">
-                                    <picture>
-                                        <source media="(max-width: 768px)" srcset="images/hadith-small.png">
-                                        <source media="(min-width: 769px)" srcset="images/hadith-big.png">
-                                        <img src="images/hadith-big.png" alt="img-name">
-                                    </picture>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Footer -->
     <footer class="footer">
@@ -383,7 +393,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

@@ -196,7 +196,7 @@
                         <!-- User Menu -->
                         <div class="user-menu">
                             <ul class="menu-list">
-                                <li class="menu-item active">
+                                <li class="menu-item">
                                     <a href="user-profile.html" class="btn-collape"><i
                                             class="fi fi-rr-apps"></i>داشبورد</a>
                                 </li>
@@ -208,7 +208,7 @@
                                     <a href="user-support.html" class="btn-collape"><i
                                             class="fi fi-rr-heart"></i>حمایت‌های من</a>
                                 </li>
-                                <li class="menu-item">
+                                <li class="menu-item active">
                                     <a href="user-tickets.html" class="btn-collape">
                                         <i class="fi fi-rr-comment-alt"></i>
                                         پیام‌های دریافتی
@@ -241,57 +241,102 @@
                                 <button type="button" class="btn-usermenu"><i
                                         class="fi fi-rr-menu-dots-vertical"></i></button>
                                 <div class="icon">
-                                    <i class="fi fi-rr-apps"></i>
+                                    <i class="fi fi-rr-comment-alt"></i>
                                 </div>
-                                <h3>داشبورد</h3>
+                                <h3>پیام‌های دریافتی</h3>
+                            </div>
+                            <div class="buttons-group">
+                                <button class="btn btn-primary icon-right" data-bs-toggle="modal"
+                                    data-bs-target="#modal-ticket"><i class="fi fi-rr-add"></i>پیام
+                                    جدید</button>
                             </div>
                         </div>
                         <div class="main-body">
-
-                            <div class="profile-status">
-                                <div class="status-inner">
-                                    <div class="card-status color-1">
-                                        <div class="card-inner">
-                                            <h2>حمایت‌های من</h2>
-                                            <div class="number">3<span>حمایت</span></div>
+                            <div class="comments-section">
+                                <ul class="comments">
+                                    <li class="comment bg-grey">
+                                        <div class="comment-wrap">
+                                            <div class="comment-info">
+                                                <div class="commenter-info ps-0">
+                                                    <span class="commenter-name">عنوان پیام ارسالی</span>
+                                                    <span class="date">21 اسفند 1401</span>
+                                                </div>
+                                            </div>
+                                            <div class="comment-body">
+                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                                    استفاده
+                                                    از
+                                                    طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                                    سطرآنچنان که
+                                                    لازم است، و برای شرایط </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card-status color-2">
-                                        <div class="card-inner">
-                                            <h2>پرداختی‌های من</h2>
-                                            <div class="number">7<span>پرداخت</span></div>
+                                        <ul class="comments child-comment">
+                                            <li class="comment">
+                                                <div class="comment-wrap">
+                                                    <div class="comment-info">
+                                                        <div class="commenter-info ps-0">
+                                                            <span class="commenter-name">پشتیبانی</span>
+                                                            <span class="date">26 اسفند 1401</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                                                            با
+                                                            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="comment bg-grey">
+                                        <div class="comment-wrap">
+                                            <div class="comment-info">
+                                                <div class="commenter-info ps-0">
+                                                    <span class="commenter-name">عنوان پیام ارسالی</span>
+                                                    <span class="date">21 اسفند 1401</span>
+                                                </div>
+                                            </div>
+                                            <div class="comment-body">
+                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                                    استفاده
+                                                    از
+                                                    طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                                    سطرآنچنان که
+                                                    لازم است، و برای شرایط </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card-status color-3">
-                                        <div class="card-inner">
-                                            <h2>حمایت‌های نقدی</h2>
-                                            <div class="number">620,000<span>تومان</span></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                </ul>
                             </div>
-
-                            <!-- Hadith -->
-                            <div class="section-row">
-                                <div class="inner-title">
-                                    <h2><i class="fi fi-rr-book"></i>حدیث روز</h2>
-                                </div>
-                                <div class="row-inner one-row">
-                                    <picture>
-                                        <source media="(max-width: 768px)" srcset="images/hadith-small.png">
-                                        <source media="(min-width: 769px)" srcset="images/hadith-big.png">
-                                        <img src="images/hadith-big.png" alt="img-name">
-                                    </picture>
-                                </div>
+                            <!-- Pagination -->
+                            <div class="my-pagination">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li class="page-item next">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <i class="fi fi-rr-arrow-small-right"></i>
+                                                <span>بعدی</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item prev">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span>قبلی</span>
+                                                <i class="fi fi-rr-arrow-small-left"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Footer -->
     <footer class="footer">
@@ -379,6 +424,41 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">خیر</button>
                     <button type="button" class="btn btn-primary">بله</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Send Ticket -->
+    <div class="modal fade" id="modal-ticket" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fi fi-rr-add"></i>تیکت جدید</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="inputgroup">
+                                    <input type="text" class="input" placeholder="عنوان تیکت" />
+                                    <label>عنوان تیکت</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="textarea-group">
+                                    <label>متن پیام</label>
+                                    <textarea class="form-control" cols="30" rows="4"
+                                        placeholder="پیام خود را بنویسید"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary-outline" data-bs-dismiss="modal">بستن</button>
+                    <button type="button" class="btn btn-primary">ارسال</button>
                 </div>
             </div>
         </div>

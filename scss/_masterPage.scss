@@ -1,0 +1,33 @@
+/*#region ----------------- Masterpage */
+.masterpage-section {
+  margin: 90px 0;
+  .image-content {
+    .img-inner {
+      width: 90%;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+  .text-content {
+    .desc {
+      p {
+        font-size: 14px;
+        line-height: 23px;
+        text-align: justify;
+        color: $textGrey;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .masterpage-section {
+    .image-content {
+      margin-top: 20px;
+    }
+  }
+}
+/*#endregion -------------- Masterpage */

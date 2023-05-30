@@ -128,14 +128,14 @@
       position: relative;
       &.active {
         .btn-collape {
-          color: $accent !important;
-          background-color: rgba($color: $accent, $alpha: 0.1);
+          color: $secondary !important;
+          background-color: rgba($color: $secondary, $alpha: 0.1);
           font-weight: 400;
           &::before {
-            background-color: $accent;
+            background-color: $secondary;
           }
           .fi {
-            color: $accent;
+            color: $secondary;
           }
         }
       }
@@ -147,14 +147,6 @@
     position: relative;
     margin-top: 0;
     border-bottom: 2px solid $background;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 1px;
-    }
     .title-inner {
       display: grid;
       grid-template-columns: 40px auto;
@@ -182,9 +174,7 @@
     }
     .buttons-group {
       .btn {
-        padding: 0.4rem 1rem 0.7rem 1rem;
-        background: $background;
-        color: $textGrey;
+        @include displayFlex(flex, center, center);
         &.icon-right {
           .fi {
             margin: 0 0 0 10px;
@@ -195,17 +185,12 @@
             margin: 0 10px 0 0;
           }
         }
-        &:hover {
-          background-color: #ddd;
-        }
       }
       .fi {
         font-size: 20px;
-        line-height: 0 !important;
-        display: inline-block !important;
         position: relative;
-        top: 6px;
-        color: $textGrey;
+        top: 1px;
+        color: white;
       }
     }
   }
@@ -314,6 +299,7 @@
 }
 
 .alert {
+  border-radius: 12px 0 12px 12px;
   p {
     margin-bottom: 0;
     font-size: 13px;
@@ -681,6 +667,9 @@
         width: 100%;
         text-align: left;
         margin-top: 15px;
+        .btn {
+          margin-right: auto;
+        }
       }
     }
   }

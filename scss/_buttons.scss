@@ -48,6 +48,24 @@
   }
 }
 
+.btn-secondary-outline {
+  background: white;
+  color: $secondary;
+  border: 1px solid $secondary;
+  .fi {
+    color: $secondary !important;
+  }
+  &:hover,
+  &:focus {
+    background: rgba($color: $secondary, $alpha: 0.2);
+    color: $secondary;
+    border-color: $secondary;
+    .fi {
+      color: $textGrey !important;
+    }
+  }
+}
+
 .btn-collapse {
   border: none;
   background-color: white;
