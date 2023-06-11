@@ -22,6 +22,9 @@
 }
 .modal-footer {
   border-top: none;
+  &.no-padding {
+    padding: 10px 0 0 0;
+  }
   .btn {
     border-radius: 50px;
   }

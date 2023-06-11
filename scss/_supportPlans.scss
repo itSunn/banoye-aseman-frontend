@@ -5,6 +5,26 @@
     margin-top: 30px;
     position: relative;
   }
+  .page-title {
+    .title-inner {
+      width: 100%;
+      @include displayFlex(flex, center, space-between);
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+    .btn-link {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 0;
+      color: $primary;
+      min-width: unset;
+      .fi {
+        font-size: 18px;
+        margin-right: 5px;
+      }
+    }
+  }
 }
 .swiper-plans {
   position: unset !important;

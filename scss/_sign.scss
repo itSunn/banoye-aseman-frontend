@@ -1,0 +1,37 @@
+/*#region ----------------- Sign Styles */
+.section-sign {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.sign-form {
+  margin-top: 1rem;
+}
+
+.links-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  .btn-resend-number,
+  .btn-change-number,
+  .btn-forget-password,
+  .btn-disposable-password {
+    font-size: 13px;
+    font-weight: 500;
+    color: $primary;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline dashed;
+    &:hover {
+      color: var(--secondary);
+    }
+    .fi {
+      margin-left: 5px;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+/*#endregion -------------- Sign Styles */

@@ -1295,24 +1295,21 @@ input[type=number] {
 }
 
 .card-product .card-inner {
-  background-color: white;
+  background-color: #f5f6f7;
   border-radius: 10px;
+}
+.card-product .thumb {
+  padding: 5px;
 }
 .card-product .thumb img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 }
 .card-product .info {
-  display: grid;
-  grid-template-columns: auto 100px;
-  align-items: center;
-  background-color: #f5f6f7;
-  border-radius: 0 0 10px 10px;
-}
-.card-product .info .name {
-  padding: 10px;
+  border-radius: 12px;
+  padding: 15px 10px;
 }
 .card-product .info .name h5 {
   color: #3c3c3c;
@@ -1321,7 +1318,7 @@ input[type=number] {
   line-height: normal;
   margin-bottom: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1355,6 +1352,7 @@ input[type=number] {
 }
 .card-product .info .payment {
   height: 100%;
+  margin-top: 15px;
 }
 .card-product .info .payment .btn-payment {
   width: 100%;
@@ -1364,11 +1362,11 @@ input[type=number] {
   color: white;
   font-size: 14px;
   font-weight: 800;
+  padding: 10px 5px;
   border-radius: 0 10px 10px 10px;
   transition: all 0.3s ease-in-out;
 }
 .card-product .info .payment .btn-payment span {
-  display: block;
   width: 100%;
   font-weight: 400;
   font-size: 14px;
@@ -1976,6 +1974,19 @@ input[type=number] {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.05);
 }
+.inputgroup .alert {
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+  padding: 0;
+  margin: 1rem 0;
+}
+.inputgroup .alert.error {
+  color: #ff3333;
+}
+.inputgroup .alert.success {
+  color: #00bd79;
+}
 
 .select-group {
   position: relative;
@@ -2099,8 +2110,10 @@ input[type=number] {
   margin: 50px 0 80px 0;
 }
 .gallery-section .title {
-  text-align: center;
-  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 15px 0;
   border-bottom: 1px solid #d0d0d0;
   margin-bottom: 20px;
 }
@@ -2108,6 +2121,17 @@ input[type=number] {
   font-size: 18px;
   color: #3c3c3c;
   margin-bottom: 0;
+}
+.gallery-section .title .btn-link {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 0;
+  color: #fea700;
+  min-width: unset;
+}
+.gallery-section .title .btn-link .fi {
+  font-size: 18px;
+  margin-right: 5px;
 }
 .gallery-section .gallery-products,
 .gallery-section .gallery-images {
@@ -2117,6 +2141,10 @@ input[type=number] {
 }
 .gallery-section .gallery-images {
   padding-bottom: 20px;
+  padding: 20px 15px 15px 15px;
+}
+.gallery-section .gallery-images .title {
+  justify-content: center;
 }
 .gallery-section .gallery-images .images-grid {
   display: grid;
@@ -2129,7 +2157,7 @@ input[type=number] {
 }
 .gallery-section .gallery-images .grid-small .img-content {
   width: 100%;
-  height: 155px;
+  height: 192px;
   overflow: hidden;
   border-radius: 5px;
   position: relative;
@@ -2179,7 +2207,7 @@ input[type=number] {
 }
 .gallery-section .gallery-images .grid-big .img-content {
   width: 100%;
-  height: 320px;
+  height: 394px;
   overflow: hidden;
   border-radius: 5px;
   position: relative;
@@ -2261,21 +2289,25 @@ input[type=number] {
 
 @media (max-width: 1400px) {
   .gallery-section .gallery-images .grid-small .img-content {
-    height: 140px;
+    height: 172px;
   }
   .gallery-section .gallery-images .grid-big .img-content {
-    height: 292px;
+    height: 356px;
   }
 }
 @media (max-width: 1199px) {
   .gallery-section .gallery-images {
     padding: 15px;
   }
+  .gallery-section .gallery-images .images-grid {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "imageBig imageBig imageSmall1 imageSmall1" "imageSmall2 imageSmall2 imageSmall4 imageSmall4" "imageSmall3 imageSmall3 imageSmall3 imageSmall3";
+  }
   .gallery-section .gallery-images .grid-small .img-content {
-    height: 134px;
+    height: 159px;
   }
   .gallery-section .gallery-images .grid-big .img-content {
-    height: 280px;
+    height: 158px;
   }
   .gallery-content .gallery-list .card-image {
     flex: 0 0 33.33%;
@@ -2285,12 +2317,6 @@ input[type=number] {
 @media (max-width: 992px) {
   .gallery-section .gallery-images {
     margin-top: 15px;
-  }
-  .gallery-section .gallery-images .grid-small .img-content {
-    height: 156px;
-  }
-  .gallery-section .gallery-images .grid-big .img-content {
-    height: 320px;
   }
   .gallery-content {
     margin-top: 2rem;
@@ -2337,6 +2363,26 @@ input[type=number] {
 .support-plans-section .section-inner {
   margin-top: 30px;
   position: relative;
+}
+.support-plans-section .page-title .title-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.support-plans-section .page-title h1 {
+  margin-bottom: 0;
+}
+.support-plans-section .page-title .btn-link {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 0;
+  color: #fea700;
+  min-width: unset;
+}
+.support-plans-section .page-title .btn-link .fi {
+  font-size: 18px;
+  margin-right: 5px;
 }
 
 .swiper-plans {
@@ -3247,6 +3293,9 @@ input[type=number] {
 
 .modal-footer {
   border-top: none;
+}
+.modal-footer.no-padding {
+  padding: 10px 0 0 0;
 }
 .modal-footer .btn {
   border-radius: 50px;
@@ -4222,3 +4271,122 @@ input[type=number] {
   }
 }
 /*#endregion -------------- Masterpage */
+/*#region ----------------- Sign Styles */
+.section-sign {
+  display: none;
+}
+.section-sign.active {
+  display: block;
+}
+
+.sign-form {
+  margin-top: 1rem;
+}
+
+.links-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.links-content .btn-resend-number,
+.links-content .btn-change-number,
+.links-content .btn-forget-password,
+.links-content .btn-disposable-password {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fea700;
+  background-color: transparent;
+  border: none;
+  -webkit-text-decoration: underline dashed;
+          text-decoration: underline dashed;
+}
+.links-content .btn-resend-number:hover,
+.links-content .btn-change-number:hover,
+.links-content .btn-forget-password:hover,
+.links-content .btn-disposable-password:hover {
+  color: var(--secondary);
+}
+.links-content .btn-resend-number .fi,
+.links-content .btn-change-number .fi,
+.links-content .btn-forget-password .fi,
+.links-content .btn-disposable-password .fi {
+  margin-left: 5px;
+  position: relative;
+  top: 1px;
+}
+
+/*#endregion -------------- Sign Styles */
+/*#region ----------------- Loader */
+.loader {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+.loader.fix-height {
+  height: 150px;
+}
+.loader .load-content {
+  border: 4px solid #f5f6f7;
+  border-radius: 50%;
+  border-top: 4px solid #fea700;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+.loader.active {
+  display: flex;
+}
+.loader.type-2 .load-content {
+  border-color: white;
+  border-top-color: #fea700;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.wrapper-loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60, 60, 60, 0.5);
+  z-index: 9999;
+  display: none;
+}
+.wrapper-loader.active {
+  display: block;
+}
+.wrapper-loader .load-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-loader .img-inner {
+  border-radius: 15px;
+  padding: 30px 15px;
+  min-width: 300px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(99, 96, 99, 0.1);
+}
+.wrapper-loader .img-inner img {
+  width: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.wrapper-loader .img-inner h6 {
+  color: #e03a49;
+  margin-bottom: 0;
+}
+
+/*#endregion -------------- Loader */

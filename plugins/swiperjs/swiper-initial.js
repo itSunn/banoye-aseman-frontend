@@ -27,7 +27,7 @@ var swiperProducts = new Swiper('.swiper-products', {
             spaceBetween: 10,
         },
         992: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 15,
         },
         1200: {

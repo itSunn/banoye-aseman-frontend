@@ -2,14 +2,25 @@
 .gallery-section {
   margin: 50px 0 80px 0;
   .title {
-    text-align: center;
-    padding: 15px;
+    @include displayFlex(flex, center, space-between);
+    padding: 10px 0 15px 0;
     border-bottom: 1px solid $borderColor;
     margin-bottom: 20px;
     h3 {
       font-size: 18px;
       color: $textDark;
       margin-bottom: 0;
+    }
+    .btn-link {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 0;
+      color: $primary;
+      min-width: unset;
+      .fi {
+        font-size: 18px;
+        margin-right: 5px;
+      }
     }
   }
   .gallery-products,
@@ -20,6 +31,10 @@
   }
   .gallery-images {
     padding-bottom: 20px;
+    padding: 20px 15px 15px 15px;
+    .title {
+      justify-content: center;
+    }
     .images-grid {
       display: grid;
       grid-template-columns: 25% 25% 50%;
@@ -29,7 +44,7 @@
       padding: 5px;
       position: relative;
       .img-content {
-        @include imgContainer(155px, 5px);
+        @include imgContainer(192px, 5px);
       }
       .text-overlay {
         position: absolute;
@@ -57,7 +72,7 @@
       grid-area: imageBig;
       padding: 5px;
       .img-content {
-        @include imgContainer(320px, 5px);
+        @include imgContainer(394px, 5px);
       }
     }
     .grid-small {
@@ -130,12 +145,12 @@
     .gallery-images {
       .grid-small {
         .img-content {
-          height: 140px;
+          height: 172px;
         }
       }
       .grid-big {
         .img-content {
-          height: 292px;
+          height: 356px;
         }
       }
     }
@@ -145,14 +160,18 @@
   .gallery-section {
     .gallery-images {
       padding: 15px;
+      .images-grid {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas: "imageBig imageBig imageSmall1 imageSmall1" "imageSmall2 imageSmall2 imageSmall4 imageSmall4" "imageSmall3 imageSmall3 imageSmall3 imageSmall3";
+      }
       .grid-small {
         .img-content {
-          height: 134px;
+          height: 159px;
         }
       }
       .grid-big {
         .img-content {
-          height: 280px;
+          height: 158px;
         }
       }
     }
@@ -170,16 +189,6 @@
   .gallery-section {
     .gallery-images {
       margin-top: 15px;
-      .grid-small {
-        .img-content {
-          height: 156px;
-        }
-      }
-      .grid-big {
-        .img-content {
-          height: 320px;
-        }
-      }
     }
   }
   .gallery-content {
