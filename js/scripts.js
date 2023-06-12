@@ -121,20 +121,14 @@ function changeValue(increment) {
 
 function changeDirectValue(number) {
     var input = document.getElementById('inputField');
-    // var value = parseInt(input.value);
-    input.value = parseInt(number);
+    input.value = separate(number);
 }
 
-// if (document.getElementById('modal-sign') != null) {
-//     var sign_level_number = document.querySelector('.section-signin');
-//     var sign_level_code = document.querySelector('.section-code');
-//     var sign_level_password = document.querySelector('.section-password');
-//     var sign_level_forgetpass = document.querySelector('.section-forgetpass');
-// }
 
 var signCurrentSection = 0;
-changeSignModalScreen(signCurrentSection);
-
+if (document.getElementById('modal-sign') != null) {
+    changeSignModalScreen(signCurrentSection);
+}
 function changeSignModalScreen(n) {
     var sectionSign = document.querySelectorAll('.section-sign')
     for (var i = 0; i < sectionSign.length; i++) {
@@ -144,27 +138,14 @@ function changeSignModalScreen(n) {
 }
 
 
-
-var fiveMinutes = 90;
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            // timer = duration;
-            display.innerHTML = "دوباره تلاش کنید"
-        }
-    }, 1000);
+function separate(Number) {
+    Number += '';
+    Number = Number.replace(',', '');
+    x = Number.split('.');
+    y = x[0];
+    z = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(y))
+        y = y.replace(rgx, '$1' + ',' + '$2');
+    return y + z;
 }
-
-// window.onload = function () {
-//     display = document.querySelector('.timer-countdown');
-//     startTimer(fiveMinutes, display);
-// };

@@ -167,7 +167,8 @@
                                 <li><a href="#"><i class="fi fi-rr-heart"></i>حمایت‌های من</a>
                                 </li>
                                 <li><a href="#"><i class="fi fi-rr-credit-card"></i>پرداخت ها</a></li>
-                                <li><a href="#"><i class="fi fi-rr-sign-in-alt"></i>خروج</a></li>
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#modal-logout"><i
+                                            class="fi fi-rr-sign-in-alt"></i>خروج</a></li>
                             </ul>
                         </div> -->
                     </div>
@@ -329,12 +330,9 @@
                         <div class="payment-grid">
                             <div class="grid-counter">
                                 <div class="input-payment">
-                                    <button class="btn-add" onclick="changeValue(true)"><i
-                                            class="fi fi-rr-plus-small"></i></button>
-                                    <input type="number" class="input" id="inputField" value="0"
-                                        placeholder="مبلغ دلخواه را وارد کنید" readonly>
-                                    <button class="btn-minus" onclick="changeValue(false)"><i
-                                            class="fi fi-rr-minus-small"></i></button>
+                                    <input type="text" class="input input-price" id="inputField" value="0"
+                                        placeholder="مبلغ دلخواه را وارد کنید"
+                                        onkeyup="javascript:this.value=separate(this.value)">
                                 </div>
                                 <div class="btns-payment-group">
                                     <button class="btn-number" onclick="changeDirectValue(10000)">10,000
@@ -344,6 +342,7 @@
                                     <button class="btn-number" onclick="changeDirectValue(80000)">80,000
                                         <span>تومان</span></button>
                                 </div>
+                                <h6 id="number-seprate"></h6>
                             </div>
                             <div class="grid-payment">
                                 <button class="btn-payment">پرداخت آنلاین</button>
@@ -876,6 +875,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="plugins/swiperjs/swiper-initial.js"></script>
     <script src="js/scripts.js"></script>
+
+
 </body>
 
 </html>

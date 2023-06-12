@@ -1,6 +1,7 @@
 /*#region ----------------- Sign Styles */
 .section-sign {
   display: none;
+  animation: swipeRightsmall 0.3s ease-in-out;
   &.active {
     display: block;
   }

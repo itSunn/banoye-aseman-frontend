@@ -131,9 +131,10 @@
     flex-wrap: wrap;
     margin-top: 2.5rem;
     .card-plans {
-      flex: 1 0 100%;
-      width: 100%;
+      flex: 1 0 50%;
+      width: 50%;
       margin-bottom: 20px;
+      padding-left: 20px;
     }
     .card-product {
       flex: 0 0 33.33%;
@@ -526,6 +527,11 @@
         flex: 0 0 50%;
         width: 50%;
       }
+      .card-plans {
+        flex: 0 0 100%;
+        width: 100%;
+        padding-left: 0;
+      }
     }
   }
 }
@@ -571,7 +577,7 @@
       .myrow {
         grid-template-columns: 100%;
         .products-main {
-          padding-right: 15px;
+          padding-right: 0;
         }
       }
     }
@@ -580,6 +586,11 @@
       .card-product {
         flex: 0 0 33.33%;
         width: 33.33%;
+      }
+      .card-plans {
+        flex: 0 0 50%;
+        width: 50%;
+        padding-left: 20px;
       }
     }
   }
@@ -594,6 +605,11 @@
       .card-product {
         flex: 0 0 50%;
         width: 50%;
+      }
+      .card-plans {
+        flex: 0 0 100%;
+        width: 100%;
+        padding-left: 0;
       }
     }
   }
