@@ -56,7 +56,10 @@
 .card-product {
   .card-inner {
     background-color: $background;
-    border-radius: 10px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
   }
   .thumb {
     padding: 5px;
@@ -70,7 +73,6 @@
     border-radius: 12px;
     padding: 15px 10px;
     .name {
-      // padding: 10px;
       h5 {
         color: $textDark;
         font-size: 13px;
@@ -127,29 +129,78 @@
       }
     }
   }
+  .price-content {
+    @include displayFlex(flex, center, space-between);
+    margin: 10px 0;
+    h4 {
+      font-size: 16px;
+      color: $textDark;
+      margin-bottom: 0;
+      span {
+        font-size: 13px;
+        color: $textSilver;
+      }
+    }
+  }
+  .btn-add {
+    background-color: $secondary;
+    color: white;
+    width: 35px;
+    height: 35px;
+    min-width: unset;
+    border-radius: 50%;
+    padding: 5px;
+    &:hover {
+      background-color: darken($color: $secondary, $amount: 7);
+    }
+    &::before {
+      content: "\f428";
+      font-family: $iconFontRegular;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      font-size: 20px;
+    }
+  }
   &.type-2 {
-    .info {
+    .card-inner {
       background-color: white;
+    }
+    .info {
       grid-template-columns: 100%;
-      padding: 15px;
+      padding: 12px;
       .name {
         padding: 0;
+        margin-bottom: 15px;
         h5 {
-          font-size: 14px;
-          font-weight: 600;
+          font-size: 13px;
+          font-weight: 500;
           margin-bottom: 10px;
           @include textTruncate(1);
         }
       }
     }
-    .payment {
-      height: auto;
-      margin-top: 15px;
-      .btn-payment {
-        padding: 10px 5px;
-        span {
-          display: unset;
-        }
+    .price-content {
+      margin-bottom: 0;
+    }
+    &:hover {
+      .card-inner {
+        box-shadow: $boxshadow;
+      }
+    }
+  }
+  &.active {
+    .card-inner {
+      border-color: $primary;
+    }
+    .btn-add {
+      background-color: $primary;
+      &::before {
+        content: "\f211";
+      }
+      &:hover {
+        background-color: $accent;
       }
     }
   }
@@ -325,6 +376,16 @@
       }
     }
   }
+  .c-footer {
+    border-top: 1px solid $borderColor;
+    padding: 8px;
+    text-align: left;
+    .btn {
+      padding: 6px 20px;
+      font-size: 13px;
+      min-width: unset;
+    }
+  }
 }
 
 @media (max-width: 1400px) {
@@ -481,6 +542,21 @@
         }
       }
     }
+    .price-content {
+      h4 {
+        font-size: 14px;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .btn-add {
+      width: 28px;
+      height: 28px;
+      &::before {
+        font-size: 14px;
+      }
+    }
     &.type-2 {
       .info {
         .name {
@@ -587,4 +663,5 @@
     }
   }
 }
+
 /*#endregion -------------- Course Details */

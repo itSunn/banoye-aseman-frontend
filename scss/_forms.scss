@@ -161,6 +161,11 @@
     color: $textGrey;
   }
   .form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: -1.8em;
+    position: relative;
+    top: -2px;
     &:checked {
       background-color: $primary;
       border-color: $primary;

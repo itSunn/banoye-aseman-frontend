@@ -149,3 +149,37 @@ function separate(Number) {
         y = y.replace(rgx, '$1' + ',' + '$2');
     return y + z;
 }
+
+if (document.getElementById('product-card-list') != null) {
+    var product_cardList = document.getElementById('product-card-list')
+    var cardProducts = product_cardList.querySelectorAll('.card-product');
+    cardProducts.forEach((card, i) => {
+        card.addEventListener('click', function () {
+            card.classList.toggle('active')
+            countActiveProducts()
+        });
+    });
+}
+
+function countActiveProducts() {
+
+    var cardProducts = product_cardList.querySelectorAll('.card-product.active');
+    var product_number = document.getElementById('products-selected').getElementsByTagName('span')[0]
+    var product_price = document.getElementById('products-price').getElementsByTagName('span')[0]
+    var mobile_product_number = document.querySelector('.mobile-product-content').getElementsByTagName('span')[0]
+    var mobile_product_price = document.querySelector('.mobile-product-price')
+
+    var counterProduct, totalproduct_price = 0;
+
+    counterProduct = cardProducts.length;
+    product_number.innerHTML = counterProduct + ' کالا'
+    mobile_product_number.innerHTML = counterProduct + ' کالا'
+
+    for (var i = 0; i < cardProducts.length; i++) {
+        var price = parseInt(cardProducts[i].getAttribute('data-price'));
+        totalproduct_price += price
+    }
+    product_price.innerHTML = separate(totalproduct_price) + ' تومان'
+    mobile_product_price.innerHTML = separate(totalproduct_price) + ' تومان'
+}
+

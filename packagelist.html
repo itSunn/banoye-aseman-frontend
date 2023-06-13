@@ -226,64 +226,48 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="side-box side-collapse">
-                                <button class="btn-collapse collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse-category-1">
-                                    <span class="title">محدوده هزینه</span>
-                                    <span class="icon"><i class="fi fi-rr-angle-small-left"></i></span>
-                                </button>
-                                <div class="collapse" id="collapse-category-1">
-                                    <div class="range-price-filter">
-                                        <div class="price-range"></div>
-                                        <div class="range-value-inner">
-                                            <div class="min-range">
-                                                <span>از</span>
-                                                <div class="price-number slider-value-min" data-value="1000"></div>
-                                                <span>تومان</span>
-                                            </div>
-                                            <div class="max-range">
-                                                <span>از</span>
-                                                <div class="price-number slider-value-max" data-value="69000000"></div>
-                                                <span>تومان</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="apply-filter">
-                                        <button type="submit" class="btn btn-primary icon-right"><i
-                                                class="fi fi-rr-filter"></i>اعمال حدوده قیمت</button>
-                                    </div>
+                            <div class="side-box side-category">
+                                <div class="box-header">
+                                    <h2>دسته بندی ها</h2>
                                 </div>
-                            </div>
-                            <div class="side-box side-switch">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="side-switch-01">
-                                    <label class="form-check-label" for="side-switch-01">تکمیل شده ها</label>
+                                <div class="box-body side-body-radios">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkbox_1">
+                                        <label class="form-check-label" for="checkbox_1">
+                                            سرویس خواب
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkbox_2">
+                                        <label class="form-check-label" for="checkbox_2">
+                                            سرویس آشپزخانه
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkbox_3">
+                                        <label class="form-check-label" for="checkbox_3">
+                                            وسایل جانبی
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="apply-filter">
-                                <button class="btn btn-primary">اعمال فیلتر</button>
+                                <h6 class="product-status" id="products-selected">کالاهای انتخاب شده : <span>0
+                                        کالا</span></h6>
+                                <h6 class="product-status" id="products-price">قیمت کل : <span>0 تومان</span></h6>
+                                <button class="btn btn-primary mt-3">پرداخت</button>
                             </div>
                         </div>
                     </div>
                     <div class="products-main">
-                        <div class="main-inner">
+                        <div class="main-inner mt-0">
                             <div class="sort-content">
-                                <h2 class="sort-title"><i class="fi fi-rr-settings-sliders"></i>مرتب سازی براساس :</h2>
-                                <ul>
-                                    <li class="active"><a href="#">پربازدیدترین</a></li>
-                                    <li><a href="#">پرفروشترین</a></li>
-                                    <li><a href="#">جدیدترین</a></li>
-                                    <li><a href="#">ارزان‌ترین</a></li>
-                                    <li><a href="#">گران‌ترین</a></li>
-                                </ul>
                                 <button type="button" class="btn-advanced-search"><i
                                         class="fi fi-rr-settings-sliders"></i>جستجوی
                                     پیشرفته</button>
-                                <button type="button" class="btn-sort" data-bs-toggle="modal"
-                                    data-bs-target="#modal-sort"><i class="fi fi-rr-apps-sort"></i>پرفروشترین</button>
                             </div>
-                            <div class="products-list">
-                                <div class="card-product type-2">
+                            <div class="products-list mt-0" id="product-card-list">
+                                <div class="card-product type-2" data-price="3200000">
                                     <div class="card-inner">
                                         <div class="thumb">
                                             <img src="https://via.placeholder.com/400x400/ccc.png" alt="img-name">
@@ -291,24 +275,15 @@
                                         <div class="info">
                                             <div class="name">
                                                 <h5>اجاق گاز چند کاره همه فن من حریف اسنوا</h5>
-                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                                                    استفاده از تکنولوژی می‌باشد</p>
-                                                <ul class="proprty-list">
-                                                    <li>ویژگی ۱ :<span>مناسب 8 نفر</span></li>
-                                                    <li>ویژگی ۲ :<span>نمیدونم چی</span></li>
-                                                    <li>ویژگی ۳ :<span>کاملا سالم</span></li>
-                                                </ul>
                                             </div>
-                                            <div class="payment">
-                                                <button class="btn-payment">
-                                                    25,000,000
-                                                    <span>تومان</span>
-                                                </button>
+                                            <div class="price-content">
+                                                <h4>3,200,000 <span>تومان</span></h4>
+                                                <div class="btn btn-add"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-product type-2">
+                                <div class="card-product type-2" data-price="1560000">
                                     <div class="card-inner">
                                         <div class="thumb">
                                             <img src="https://via.placeholder.com/400x400/ccc.png" alt="img-name">
@@ -316,24 +291,15 @@
                                         <div class="info">
                                             <div class="name">
                                                 <h5>اجاق گاز چند کاره همه فن من حریف اسنوا</h5>
-                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                                                    استفاده از تکنولوژی می‌باشد</p>
-                                                <ul class="proprty-list">
-                                                    <li>ویژگی ۱ :<span>مناسب 8 نفر</span></li>
-                                                    <li>ویژگی ۲ :<span>نمیدونم چی</span></li>
-                                                    <li>ویژگی ۳ :<span>کاملا سالم</span></li>
-                                                </ul>
                                             </div>
-                                            <div class="payment">
-                                                <button class="btn-payment">
-                                                    25,000,000
-                                                    <span>تومان</span>
-                                                </button>
+                                            <div class="price-content">
+                                                <h4>1,560,000 <span>تومان</span></h4>
+                                                <button class="btn btn-add"></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-product type-2">
+                                <div class="card-product type-2" data-price="250000">
                                     <div class="card-inner">
                                         <div class="thumb">
                                             <img src="https://via.placeholder.com/400x400/ccc.png" alt="img-name">
@@ -341,24 +307,15 @@
                                         <div class="info">
                                             <div class="name">
                                                 <h5>اجاق گاز چند کاره همه فن من حریف اسنوا</h5>
-                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                                                    استفاده از تکنولوژی می‌باشد</p>
-                                                <ul class="proprty-list">
-                                                    <li>ویژگی ۱ :<span>مناسب 8 نفر</span></li>
-                                                    <li>ویژگی ۲ :<span>نمیدونم چی</span></li>
-                                                    <li>ویژگی ۳ :<span>کاملا سالم</span></li>
-                                                </ul>
                                             </div>
-                                            <div class="payment">
-                                                <button class="btn-payment">
-                                                    25,000,000
-                                                    <span>تومان</span>
-                                                </button>
+                                            <div class="price-content">
+                                                <h4>250,000 <span>تومان</span></h4>
+                                                <button class="btn btn-add"></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-product type-2">
+                                <div class="card-product type-2" data-price="400000">
                                     <div class="card-inner">
                                         <div class="thumb">
                                             <img src="https://via.placeholder.com/400x400/ccc.png" alt="img-name">
@@ -366,44 +323,30 @@
                                         <div class="info">
                                             <div class="name">
                                                 <h5>اجاق گاز چند کاره همه فن من حریف اسنوا</h5>
-                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                                                    استفاده از تکنولوژی می‌باشد</p>
-                                                <ul class="proprty-list">
-                                                    <li>ویژگی ۱ :<span>مناسب 8 نفر</span></li>
-                                                    <li>ویژگی ۲ :<span>نمیدونم چی</span></li>
-                                                    <li>ویژگی ۳ :<span>کاملا سالم</span></li>
-                                                </ul>
                                             </div>
-                                            <div class="payment">
-                                                <button class="btn-payment">
-                                                    25,000,000
-                                                    <span>تومان</span>
-                                                </button>
+                                            <div class="price-content">
+                                                <h4>400,000 <span>تومان</span></h4>
+                                                <button class="btn btn-add"></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="my-pagination">
-                                <nav aria-label="Page navigation">
-                                    <ul class="pagination">
-                                        <li class="page-item next">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <i class="fi fi-rr-arrow-small-right"></i>
-                                                <span>بعدی</span>
-                                            </a>
-                                        </li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item prev">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <span>قبلی</span>
-                                                <i class="fi fi-rr-arrow-small-left"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                                <div class="card-product type-2" data-price="3200000">
+                                    <div class="card-inner">
+                                        <div class="thumb">
+                                            <img src="https://via.placeholder.com/400x400/ccc.png" alt="img-name">
+                                        </div>
+                                        <div class="info">
+                                            <div class="name">
+                                                <h5>اجاق گاز چند کاره همه فن من حریف اسنوا</h5>
+                                            </div>
+                                            <div class="price-content">
+                                                <h4>3,200,000 <span>تومان</span></h4>
+                                                <button class="btn btn-add"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -412,6 +355,16 @@
         </div>
     </div>
     <div class="filterside-overlay"></div>
+
+    <div class="payment-over">
+        <div class="inner">
+            <h6 class="mobile-product-content">تعداد کالا : <span>0</span></h6>
+            <button class="btn btn-primary">
+                پرداخت
+                <span class="mobile-product-price">0 تومان</span>
+            </button>
+        </div>
+    </div>
 
 
 
@@ -486,42 +439,6 @@
             <span>کلیه حقوق مادی و معنوی این سایت متعلق به موسسه خیریه بانوی آسمان می باشد</span>
         </div>
     </footer>
-
-    <!-- Modal Sort -->
-    <div class="modal fade" id="modal-sort" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">مرتب سازی بر اساس</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="sort-radio-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="modal-sort-radio" id="modal-sort-1"
-                                checked>
-                            <label class="form-check-label" for="modal-sort-1">پرفروشترین</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="modal-sort-radio" id="modal-sort-2">
-                            <label class="form-check-label" for="modal-sort-2">جدیدترین</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="modal-sort-radio" id="modal-sort-3">
-                            <label class="form-check-label" for="modal-sort-3">ارزان‌ترین</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="modal-sort-radio" id="modal-sort-4">
-                            <label class="form-check-label" for="modal-sort-4">گرانترین</label>
-                        </div>
-                        <div class="btns-apply-filter">
-                            <button class="btn btn-primary">اعمال فیلتر</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
