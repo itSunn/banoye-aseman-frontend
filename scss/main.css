@@ -2902,6 +2902,17 @@ input[type=number] {
 .footer .links {
   margin: 15px 0;
 }
+.footer .links a img {
+  width: 100px;
+}
+.footer .links p {
+  margin: 14px 0 0 0;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #636063;
+  transition: all 0.2s ease-in-out;
+}
 .footer .links h5 {
   font-size: 18px;
   font-weight: 600;
@@ -2930,6 +2941,21 @@ input[type=number] {
   font-weight: 600;
   color: #163f79;
   margin-bottom: 20px;
+}
+.footer .socials .contact-way {
+  margin-top: 14px;
+}
+.footer .socials .contact-way li {
+  margin: 12px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #636063;
+}
+.footer .socials .contact-way svg {
+  height: 20px;
+  width: 20px;
+  margin-left: 2px;
+  color: #636063;
 }
 .footer .socials .icons-list {
   display: flex;
@@ -4867,4 +4893,4 @@ input[type=number] {
     padding: 10px 5px;
   }
 }
-/*#endregion -------------- Tabs */
+/*#endregion -------------- Tabs *//*# sourceMappingURL=main.css.map */

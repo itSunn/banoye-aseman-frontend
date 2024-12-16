@@ -8,6 +8,21 @@
   }
   .links {
     margin: 15px 0;
+    a {
+      img {
+        width: 100px;
+      }
+    }
+
+    p {
+      margin: 14px 0 0 0;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 400;
+      color: $textGrey;
+      transition: all 0.2s ease-in-out;
+    }
+
     h5 {
       font-size: 18px;
       font-weight: 600;
@@ -39,6 +54,22 @@
       color: $secondary;
       margin-bottom: 20px;
     }
+    .contact-way {
+      margin-top: 14px;
+      li {
+        margin: 12px 0;
+        font-size: 14px;
+        font-weight: 400;
+        color: $textGrey;
+      }
+      svg {
+        height: 20px;
+        width: 20px;
+        margin-left: 2px;
+        color: $textGrey;
+      }
+    }
+
     .icons-list {
       @include displayFlex(flex, center, flex-start);
       li {
